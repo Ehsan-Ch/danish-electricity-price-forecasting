@@ -1,0 +1,58 @@
+{
+  "test_start": "2026-08-31",
+  "test_end": "2026-09-29",
+  "test_days": 30,
+  "data_kind": "historical Energinet observations",
+  "evaluation": "daily rolling origin; 90-day window; final 14 eligible days held out for calibration",
+  "issue_time": "09:00 UTC on the day before the target UTC day",
+  "availability_rule": "delivery timestamp + 24h <= issue; training targets strictly earlier",
+  "interval": "90% split calibration; temporal coverage not guaranteed",
+  "limits": {
+    "capacity_mwh": 8.0,
+    "power_mw": 2.0,
+    "efficiency": 0.95,
+    "soc_step_mwh": 0.5,
+    "cost_eur_mwh": 2.0,
+    "slippage_eur_mwh": 0.5,
+    "daily_gross_budget_eur": 10000.0,
+    "daily_loss_limit_eur": 1500.0
+  },
+  "areas": {
+    "DK1": {
+      "observations": 720,
+      "mae": 51.24439625179825,
+      "rmse": 67.72756540062686,
+      "baseline_72h_mae": 71.03711453055556,
+      "baseline_168h_mae": 67.26155891145832,
+      "coverage": 0.7944444444444444,
+      "mean_interval_width": 166.50345138016436,
+      "paper_pnl_eur": 11147.690970632568,
+      "max_drawdown_eur": 0.0,
+      "filled_orders": 87,
+      "rejected_orders": 0
+    },
+    "DK2": {
+      "observations": 720,
+      "mae": 51.20116156267436,
+      "rmse": 66.5975940722597,
+      "baseline_72h_mae": 70.81506589722223,
+      "baseline_168h_mae": 64.73107973923611,
+      "coverage": 0.7944444444444444,
+      "mean_interval_width": 165.41954991756376,
+      "paper_pnl_eur": 9841.212376997697,
+      "max_drawdown_eur": 0.0,
+      "filled_orders": 78,
+      "rejected_orders": 0
+    }
+  },
+  "provenance": {
+    "url": "https://api.energidataservice.dk/dataset/DayAheadPrices?start=2026-04-01&end=2026-10-01&filter=%7B%22PriceArea%22%3A+%5B%22DK1%22%2C+%22DK2%22%5D%7D&sort=TimeUTC%2CPriceArea&limit=0",
+    "retrieved_utc": "2026-10-12T18:53:55.642013+00:00",
+    "sha256": "2bded46c0ce695cf3f6e0e714ccde0e8c311b225728193b346a190fe4210e531",
+    "records": 35136,
+    "source": "Energinet / Energi Data Service",
+    "unit": "EUR/MWh",
+    "start_local_inclusive": "2026-04-01",
+    "end_local_exclusive": "2026-10-01"
+  }
+}
