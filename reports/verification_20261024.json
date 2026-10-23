@@ -1,0 +1,52 @@
+{
+  "verified_on": "2026-10-24",
+  "base_commit": "333fdbb155ce4e0b9a9755ad7ffe1e14ff7ca979",
+  "local_unit_tests": {
+    "passed": 16,
+    "failed": 0,
+    "python": "3.12.14"
+  },
+  "export_audit": "passed",
+  "checked": [
+    "unique forecast and order keys",
+    "issue before delivery",
+    "MAE/RMSE/baselines/coverage/interval width",
+    "fill slippage and cash flows",
+    "per-hour power and energy conversion",
+    "per-day state of charge and terminal inventory",
+    "daily and total P&L and daily-close drawdown"
+  ],
+  "areas": {
+    "DK1": {
+      "observations": 720,
+      "mae": 51.24439625179825,
+      "rmse": 67.72756540062686,
+      "baseline_72h_mae": 71.03711453055556,
+      "baseline_168h_mae": 67.26155891145832,
+      "coverage": 0.7944444444444444,
+      "mean_interval_width": 166.50345138016436,
+      "filled_orders": 87,
+      "paper_pnl_eur": 11147.690970632564
+    },
+    "DK2": {
+      "observations": 720,
+      "mae": 51.20116156267436,
+      "rmse": 66.5975940722597,
+      "baseline_72h_mae": 70.81506589722223,
+      "baseline_168h_mae": 64.73107973923611,
+      "coverage": 0.7944444444444444,
+      "mean_interval_width": 165.41954991756376,
+      "filled_orders": 78,
+      "paper_pnl_eur": 9841.212376997697
+    }
+  },
+  "limits": "Audits published exports and software behavior; no fresh source download or full real-data model refit/replay. Historical results are not new trading results.",
+  "hosted_ci": {
+    "run_id": 38294552723,
+    "python_3_12": "failure before any recorded steps",
+    "python_3_13": "failure before any recorded steps",
+    "python_3_11": "cancelled before any recorded steps",
+    "root_cause": "not established from available job evidence"
+  }
+}
+

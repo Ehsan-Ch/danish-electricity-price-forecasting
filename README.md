@@ -122,6 +122,25 @@ Before operational use, add point-in-time data, an actual auction calendar, fore
 
 The adapter uses `TimeUTC`, `PriceArea`, and `DayAheadPriceEUR`; API start/end parameters use Danish local time. Duplicate observations, missing intervals, non-finite values and incomplete hours cause an explicit failure. Source records are not silently interpolated. This adapter supports the quarter-hour dataset from October 1, 2025 onward, not the older hourly `Elspotprices` dataset. Source hashes and retrieval timestamps are preserved in the benchmark metadata. Source data remains subject to its provider's terms; the license below applies to this project's code.
 
+## Verification — 24 October 2026
+
+The published implementation passed all **16 local unit/integration tests**.
+An independent audit of its saved exports reproduced forecast MAE, RMSE,
+baseline errors, interval coverage and width. All **165 filled paper orders**
+reconciled with adverse slippage, fees, per-hour power limits, battery energy
+conversion, daily state of charge, daily cash flows and reported drawdown.
+[Verification receipt](reports/verification_20261024.json).
+
+This checks the existing benchmark exports; it is not a new real-data model
+refit or a fresh trading experiment. The older local `power_forecast` scaffold
+was not merged over this published `powertrade` implementation.
+
+[Hosted run 38294552723](https://github.com/Ehsan-Ch/danish-electricity-price-forecasting/actions/runs/38294552723)
+failed for Python 3.12/3.13 and was cancelled for 3.11 before any recorded steps.
+The job log was unavailable (404), so the cause could not be established from
+the available evidence. Local passing tests do not establish a passing hosted
+CI run; no account or billing settings were changed.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
