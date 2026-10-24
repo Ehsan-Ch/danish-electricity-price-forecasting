@@ -42,6 +42,21 @@
   },
   "limits": "Audits published exports and software behavior; no fresh source download or full real-data model refit/replay. Historical results are not new trading results.",
   "hosted_ci": {
+    "run_id": 40036574210,
+    "commit": "013448fc6244fe133c9bb58705b6febf8c55a8de",
+    "conclusion": "success",
+    "python_versions": {
+      "3.11": "success",
+      "3.12": "success",
+      "3.13": "success"
+    },
+    "verified_steps": [
+      "package installation",
+      "complete unittest suite"
+    ],
+    "url": "https://github.com/Ehsan-Ch/danish-electricity-price-forecasting/actions/runs/40036574210"
+  },
+  "hosted_ci_previous": {
     "run_id": 38294552723,
     "python_3_12": "failure before any recorded steps",
     "python_3_13": "failure before any recorded steps",
@@ -49,4 +64,3 @@
     "root_cause": "not established from available job evidence"
   }
 }
-

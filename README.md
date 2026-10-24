@@ -135,11 +135,11 @@ This checks the existing benchmark exports; it is not a new real-data model
 refit or a fresh trading experiment. The older local `power_forecast` scaffold
 was not merged over this published `powertrade` implementation.
 
-[Hosted run 38294552723](https://github.com/Ehsan-Ch/danish-electricity-price-forecasting/actions/runs/38294552723)
-failed for Python 3.12/3.13 and was cancelled for 3.11 before any recorded steps.
-The job log was unavailable (404), so the cause could not be established from
-the available evidence. Local passing tests do not establish a passing hosted
-CI run; no account or billing settings were changed.
+[Hosted run 40036574210](https://github.com/Ehsan-Ch/danish-electricity-price-forecasting/actions/runs/40036574210)
+**passed on Python 3.11, 3.12 and 3.13**, including package installation and the
+complete test suite, on commit `013448fc6244fe133c9bb58705b6febf8c55a8de`.
+The earlier run failed before recording test steps; that historical failure
+is superseded by this successful run. No account or billing settings were changed.
 
 ## License
 
